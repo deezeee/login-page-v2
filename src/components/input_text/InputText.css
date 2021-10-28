@@ -1,0 +1,52 @@
+.input-field{
+    padding: 2px;
+    margin-bottom: 10px;
+}
+
+.input-field > div {
+    margin-bottom: 5px;
+}
+
+.input-field > div:last-child{
+    margin-bottom: 0;
+}
+
+.input-field .input-label{
+    font-size: 14px;
+    font-weight: 500;
+    color: rgba(0, 0, 0, .6);
+}
+
+.input-field .input-value{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid var(--light-grey-color);
+    margin-bottom: 8px;
+}
+
+.input-field .input-value::placeholder{
+    color: var(--light-grey-color);
+}
+
+.input-field .input-value:hover,
+.input-field .input-value:focus,
+.input-field.hovered .input-value,
+.input-field.focused .input-value{
+    border: 1px solid var(--light-green-color);
+}
+
+.input-field .input-value:focus::placeholder{
+    font-size: 12px;
+}
+
+.input-field .error-field{
+    height: 12px;
+    line-height: 12px;
+    font-size: 12px;
+    font-weight: 300;
+    color: red;
+    padding-left: 10px;
+}

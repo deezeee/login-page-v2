@@ -1,38 +1,73 @@
-.App {
-  text-align: center;
+.login-container {
+  width: 450px;
+  background-color: white;
+  padding: 30px;
+  box-shadow: 0px 10px 15px var(--light-grey-color);
+  border-radius: 5px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.login-container .login-title {
+  font-size: 26px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.7);
+  margin-bottom: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.login-container .login-register,
+.login-container .login-more {
+  font-size: 12px;
+  font-weight: 500;
+  margin-bottom: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.login-container .login-register > span,
+.login-container .login-remember > span{
+    color:rgba(0, 0, 0, 0.6)
+}
+
+.login-container .login-more,
+.login-container .login-remember
+{
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.login-container .login-more .remember-button{
+    height: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.login-container .login-remember>span{
+    margin-left: 5px;
 }
+
+.login-container .login-more .login-remember:hover {
+  cursor: pointer;
+}
+
+.login-container .login-register a {
+  margin-left: 5px;
+}
+
+.login-container .password-wrapper {
+  position: relative;
+}
+
+.login-container .toggle-password {
+  position: absolute;
+  right: 2%;
+  top: 40%;
+  background-color: transparent;
+  outline: none;
+  border: none;
+}
+
+.login-container .toggle-password:hover {
+  cursor: pointer;
+}
+
+.login-container .icon {
+  width: 20px;
+  height: 20px;
+}
+
