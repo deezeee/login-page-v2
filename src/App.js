@@ -42,12 +42,12 @@ function App() {
   };
 
   const isInputBothEmailAndPassword = () => {
-    return email.trim() !== "" && password.trim() !== "";
+    return email.trim().length !== 0 && password.trim().length !== 0;
   };
 
   const isAvailableForSubmit = () => {
     if (
-      isInputBothEmailAndPassword === false ||
+      isInputBothEmailAndPassword() === false ||
       validateEmail(email.trim()) === false
     )
       return false;
@@ -85,7 +85,9 @@ function App() {
               label="Mật khẩu"
               placeholder="Nhập mật khẩu"
               ref={passwordRef}
-              handleInputChanging={(e) => setPassword(e.target.value)}
+              handleInputChanging={(e) => {
+                setPassword(e.target.value);
+              }}
               handleError={checkErrorInputPassword}
             />
             <button
